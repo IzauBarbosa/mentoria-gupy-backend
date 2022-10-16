@@ -1,7 +1,7 @@
 import express, { Express, Request, Response } from 'express';
 
 const app: Express = express();
-const port = 8000;
+const { PORT } = process.env;
 
 app.get('/hello', (req: Request, res: Response) => {
   const { name } = req.query;
@@ -9,6 +9,6 @@ app.get('/hello', (req: Request, res: Response) => {
   res.send(JSON.stringify(response));
 });
 
-app.listen(port, () => {
-  console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`);
 });

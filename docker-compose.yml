@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  mentoria-gupy-backend:
+    image: izaubarbosa/mentoria-gupy-backend
+    container_name: mentoria-gupy-backend
+    networks:
+      - mentoria-gupy-backend-bridge
+    ports:
+      - 8000:8000
+
+networks:
+  mentoria-gupy-backend-bridge:
+    driver: bridge
