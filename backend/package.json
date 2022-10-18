@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --watch 'src/' --exec 'ts-node src/server/index.ts' -e ts"
+    "dev": "nodemon --watch 'src/' --exec 'ts-node src/index.ts' -e ts",
+    "typeorm": "./node_modules/.bin/typeorm"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,9 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "pg": "^8.8.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.10"
   }
 }
